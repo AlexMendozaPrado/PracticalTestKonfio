@@ -24,6 +24,15 @@ class DogListViewModel @Inject constructor(
         getDogsList()
 
     }
+    fun onEvent(event: DogListUIEvent) {
+        when (event) {
+            is DogListUIEvent.NavigateToDogListScreen -> {
+                _dogListState.update {
+                    it.copy(isCurrentDogsListScreen = !dogListState.value.isCurrentDogsListScreen)
+                }
+            }
+        }
+    }
 
     private fun getDogsList() {
         viewModelScope.launch {

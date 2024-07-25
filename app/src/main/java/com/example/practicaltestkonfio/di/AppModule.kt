@@ -43,6 +43,7 @@ class AppModule {
             DogDatabase::class.java,
             "dog_db"
         )
+            .fallbackToDestructiveMigration()
             .build()
 
     }

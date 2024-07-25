@@ -8,7 +8,8 @@ import com.example.practicaltestkonfio.dogList.domain.model.Dog
             age = age ?: 0,
             description = description ?: "",
             dogName = dogName ?: "",
-            id = id ?: 0
+            id = id ?: 0,
+            imagePath = imagePath ?: ""
         )
     }
 
@@ -17,7 +18,8 @@ import com.example.practicaltestkonfio.dogList.domain.model.Dog
             age = age,
             description = description,
             dogName = dogName,
-            id = id
+            id = id,
+            imagePath = imagePath
 
         )
 

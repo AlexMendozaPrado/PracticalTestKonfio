@@ -14,7 +14,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.example.practicaltestkonfio.dogList.presentation.DogListViewModel
+import com.example.practicaltestkonfio.dogList.util.Screen
 import com.example.practicaltestkonfio.ui.theme.PracticalTestKonfioTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -30,7 +34,15 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
 
                 ) {
+                    val navController = rememberNavController()
+
                     val dogListViewModel = viewModel<DogListViewModel>()
+                    NavHost(navController = navController,startDestination = Screen.Home.rout
+                    ){
+                        composable(Screen.Home.rout){
+                            HomeScreen(navController)
+                        }
+                    }
                 }
             }
         }

@@ -4,6 +4,7 @@ import com.example.practicaltestkonfio.dogList.domain.model.Dog
 
 data class DogListState (
     val dogs : List<Dog> = emptyList(),
-    val isLoading : Boolean = false
+    val isLoading : Boolean = false,
+    val isCurrentDogsListScreen : Boolean = false
 
 )

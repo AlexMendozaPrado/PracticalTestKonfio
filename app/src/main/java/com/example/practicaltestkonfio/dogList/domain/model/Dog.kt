@@ -4,6 +4,8 @@ data class Dog(
     val age: Int,
     val description: String,
     val dogName: String,
-    val id: Int
+    val id: Int,
+    val imagePath : String
+
 
     )
