@@ -6,8 +6,10 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.Home
 import androidx.compose.material.icons.rounded.Movie
 import androidx.compose.material.icons.rounded.Upcoming
+import androidx.compose.material.icons.sharp.Apps
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -76,7 +78,7 @@ fun HomeScreen(navController: NavHostController) {
                 startDestination = Screen.DogList.rout
             ){
                 composable(Screen.DogList.rout){
-                    DogsListScreen(dogListState,navController)
+                    DogsListScreen(dogListState=dogListState,navController=navController)
 
                 }
             }
@@ -97,12 +99,12 @@ fun BottomNavigationBar(
     val items = listOf(
         BottomItem(
             title = "Home",
-            icon = Icons.Rounded.Movie
+            icon = Icons.Rounded.Home
 
         ),
         BottomItem(
-            title = "DogList",
-            icon = Icons.Rounded.Upcoming
+            title = "Get DogList",
+            icon = Icons.Sharp.Apps
         )
     )
     val selected = rememberSaveable {

@@ -5,7 +5,7 @@ data class Dog(
     val description: String,
     val dogName: String,
     val id: Int,
-    val imagePath : String
+    val image : String
 
 
     )

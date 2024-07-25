@@ -8,7 +8,7 @@ data class DogEntity(
     val age: Int,
     val description: String,
     val dogName: String,
-    val imagePath : String,
+    val image : String,
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0
 

@@ -1,11 +1,12 @@
 package com.example.practicaltestkonfio.dogList.data.remote.respond
 
+import com.google.gson.annotations.SerializedName
+
 data class DogDto(
-    val age: Int ?,
-    val description: String ?,
-    val dogName: String ?,
-    val id: Int ?,
-    val imagePath : String ?,
+    @SerializedName("dogName") val dogName: String,
+    @SerializedName("description") val description: String,
+    @SerializedName("age") val age: Int,
+    @SerializedName("image") val image: String
 
 
     )

@@ -36,7 +36,6 @@ class MainActivity : ComponentActivity() {
                 ) {
                     val navController = rememberNavController()
 
-                    val dogListViewModel = viewModel<DogListViewModel>()
                     NavHost(navController = navController,startDestination = Screen.Home.rout
                     ){
                         composable(Screen.Home.rout){

@@ -9,7 +9,7 @@ interface DogApi {
     @GET("dogs")
     suspend fun getDogsList(
 
-    ): DogListDto
+    ): List<DogDto>
 
 
     companion object {

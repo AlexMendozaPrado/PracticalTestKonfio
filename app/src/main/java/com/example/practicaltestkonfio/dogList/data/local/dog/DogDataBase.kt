@@ -9,7 +9,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 
 @Database(
     entities = [DogEntity::class],
-    version = 4,
+    version = 5,
     exportSchema = false,
 )
 

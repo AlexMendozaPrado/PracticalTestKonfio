@@ -22,8 +22,8 @@ class DogListViewModel @Inject constructor(
 
     init {
         getDogsList()
-
     }
+
     fun onEvent(event: DogListUIEvent) {
         when (event) {
             is DogListUIEvent.NavigateToDogListScreen -> {
@@ -46,32 +46,24 @@ class DogListViewModel @Inject constructor(
                             it.copy(isLoading = false)
                         }
                     }
-
                     is Resource.Loading -> {
                         _dogListState.update {
                             it.copy(isLoading = result.isLoading)
                         }
-
                     }
-
                     is Resource.Success -> {
                         result.data?.let { dogList ->
                             _dogListState.update {
                                 it.copy(
-                                    // retorna la lista de perros
-                                    dogs = dogList
+                                    dogs = dogList,
+                                    isLoading = false
                                 )
                             }
                             Log.d("DogListViewModel", "Loaded dogs: $dogList")
-
                         }
-
                     }
                 }
             }
-
-
         }
     }
-
 }
